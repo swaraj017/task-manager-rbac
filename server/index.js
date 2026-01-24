@@ -10,8 +10,8 @@ dotenv.config();
 const app = express();
 
 app.use(cors(
-    { origin: "https://task-manager-rbac-sys.vercel.app", 
-      credentials: true }
+    { origin: true,
+  credentials: true}
     ));
 
     
