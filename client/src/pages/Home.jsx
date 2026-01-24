@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
       <div className="max-w-md w-full">
-        {/* Main Card */}
+         
         <div className="bg-white rounded-xl shadow-2xl p-12 text-center">
           <div className="text-6xl mb-6">✓</div>
           <h1 className="text-4xl font-bold text-gray-800 mb-2">
@@ -40,7 +40,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Features */}
+    
         <div className="mt-12 grid grid-cols-3 gap-4 text-white">
           <div className="text-center">
             <div className="text-3xl mb-2">👥</div>
