@@ -70,31 +70,6 @@ Tasks:
 
 
 
-
-## Structure
-
-server/
-├── src/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middlewares/
-│   └── connection/
-├── index.js
-└── package.json
-
-client/
-├── src/
-│   ├── pages/
-│   ├── components/
-│   ├── services/
-│   └── App.jsx
-├── vite.config.js
-└── package.json
-
-
-
-
 ## Database
 
 MongoDB with collections for users, workspaces, and tasks.
