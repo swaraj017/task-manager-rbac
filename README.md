@@ -27,14 +27,13 @@ Frontend runs on  https://task-manager-rbac-sys.vercel.app
 
 ## Admin Login
 
-Email: swaraj@gmail.com
-Password: 123
+
+Demo = Email: swaraj@gmail.com  Password: 123
 
 
 ## Here u can check Demo User Login- who have tasks!
 
-Email: yash@gmail.com
-password:123
+Demo = Email: yash@gmail.com  password:123
 
 ## How It Works
 
