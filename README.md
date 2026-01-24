@@ -1,4 +1,4 @@
-# Task Manager
+# Task Manager live on https://task-manager-rbac-sys.vercel.app
 
 A task management system with role-based access control. Admins can create workspaces and assign tasks to users. Users can view their assigned tasks and update status.
 
@@ -16,8 +16,8 @@ npm install
 npm run dev
 ```
 
-Backend runs on localhost:5000
-Frontend runs on localhost:5173
+Backend runs on https://task-manager-backend-87v7.onrender.com
+Frontend runs on  https://task-manager-rbac-sys.vercel.app
 
 
 ## Admin Login
