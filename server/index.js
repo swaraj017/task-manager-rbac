@@ -29,6 +29,7 @@ async function startServer()
   app.get("/", (req, res) => res.send("Hey there"));
 
   app.listen(5000, () => console.log("Server running  "));
+  console.log("Server running");
 }
 
 startServer();
