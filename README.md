@@ -1,39 +1,39 @@
-# Task Manager 
+# Task Manager
 
 A task management system with role-based access control. Admins can create workspaces and assign tasks to users. Users can view their assigned tasks and update status.
 
-live on https://task-manager-rbac-sys.vercel.app
+## Quick Start
 
-
-## Setup
-
-Install dependencies and run:
-
+1) Server
 ```bash
 cd server
 npm install
+# create a .env file (see Environment) then run
 npm run dev
+```
+Runs on http://localhost:5000
 
+2) Client
+```bash
 cd client
 npm install
 npm run dev
 ```
 
-Backend runs on https://task-manager-backend-87v7.onrender.com
-
-
-Frontend runs on  https://task-manager-rbac-sys.vercel.app
+Backend runs on localhost:5000
+Frontend runs on localhost:5173
 
 
 ## Admin Login
 
-
-Demo = Email: swaraj@gmail.com  Password: 123
+Email: swaraj@gmail.com
+Password: 123
 
 
 ## Here u can check Demo User Login- who have tasks!
 
-Demo = Email: yash@gmail.com  password:123
+Email: yash@gmail.com
+password:123
 
 ## How It Works
 
@@ -48,46 +48,45 @@ Users can:
 - Update task status (Pending → In Progress → Completed)
 - Filter tasks by status
 
-## Tech Used
+## Tech Stack
 
-Node.js, Express,JWT,Bcryptjs MongoDB, React, Vite, Tailwind CSS
+- Backend: Node.js, Express, MongoDB, JWT, bcryptjs
+- Frontend: React, Vite, Tailwind CSS
 
-## API
+## API (base path: /api)
 
 Auth:
-- POST /auth/register
-- POST /auth/login
-- GET /auth/profile
+- POST /api/auth/register
+- POST /api/auth/login
+- GET  /api/auth/profile
 
 Workspaces:
-- POST /workspaces (admin)
-- GET /workspaces
-- PATCH /workspaces/:id (admin)
-- DELETE /workspaces/:id (admin)
-- GET /workspaces/:id/tasks
+- POST   /api/workspaces           (admin)
+- GET    /api/workspaces
+- PATCH  /api/workspaces/:id       (admin)
+- DELETE /api/workspaces/:id       (admin)
+- GET    /api/workspaces/:id/tasks
 
 Tasks:
-- POST /tasks/:workspaceId (admin)
-- GET /tasks/my-tasks
-- PATCH /tasks/:id/status
-- DELETE /tasks/:id (admin)
+- POST   /api/tasks/:workspaceId   (admin)
+- GET    /api/tasks/my-tasks
+- PATCH  /api/tasks/:id/status
+- DELETE /api/tasks/:id            (admin)
 
+## Database Models
 
+- User: name, email, password, role
+- Workspace: name, createdBy, isActive
+- Task: title, description, status, assignedTo, workspace
 
-## Database
+## Notes on Scalability
 
-MongoDB with collections for users, workspaces, and tasks.
-
-User: name, email, password, role
-Workspace: name, createdBy, isActive
-Task: title, description, status, assignedTo, workspace
-
-
-## Scalability
-
-Current system uses single MongoDB instance and Express server. To scale: add database indexing on workspace and user fields for faster queries, implement API caching for frequently accessed data, separate frontend and backend into different servers, use load balancing if traffic increases.
-
+- Add indexes on workspace, assignedTo fields
+- Implement caching for frequently accessed reads
+- Split frontend/backend deployments; use load balancing as needed
 
 ## Security
 
-JWT authentication with 1-day expiration. Passwords hashed with bcryptjs. Admin routes protected with middleware.
+- JWT auth with 1-day expiration
+- Passwords hashed with bcryptjs
+- Admin routes protected with middleware

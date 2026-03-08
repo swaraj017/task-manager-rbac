@@ -17,7 +17,7 @@ export default function Home() {
             Task Manager
           </h1>
           <p className="text-gray-700 mb-8">
-            Manage workspaces, assign tasks, and track progress
+            Manage workspaces, assign tasks, and track progress securely with role-based access.
           </p>
 
           <div className="space-y-3">
@@ -25,14 +25,14 @@ export default function Home() {
               to="/login"
               className="block bg-black hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition"
             >
-              Sign In
+              Sign in
             </Link>
 
             <Link
               to="/register"
               className="block bg-gray-200 hover:bg-gray-300 text-black font-semibold py-3 px-6 rounded-lg transition"
             >
-              Create Account
+              Create account
             </Link>
           </div>
         </div>
@@ -40,15 +40,15 @@ export default function Home() {
         <div className="mt-12 grid grid-cols-3 gap-4 text-black">
            <div className="text-center">
             <div className="text-3xl mb-2">👥</div>
-            <p className="text-sm font-semibold">User Roles</p>
+            <p className="text-sm font-semibold">User roles</p>
           </div>
           <div className="text-center">
             <div className="text-3xl mb-2">📋</div>
-            <p className="text-sm font-semibold">Task Tracking</p>
+            <p className="text-sm font-semibold">Task tracking</p>
           </div>
           <div className="text-center">
             <div className="text-3xl mb-2">🎯</div>
-            <p className="text-sm font-semibold">Workspace Mgmt</p>
+            <p className="text-sm font-semibold">Workspace mgmt</p>
           </div>
         </div>
       </div>
